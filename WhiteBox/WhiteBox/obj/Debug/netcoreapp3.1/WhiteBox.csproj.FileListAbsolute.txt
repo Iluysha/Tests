@@ -88,7 +88,6 @@ C:\Users\Ilya\Desktop\Labs\Tests\Tests\WhiteBox\WhiteBox\bin\Debug\netcoreapp3.1
 C:\Users\Ilya\Desktop\Labs\Tests\Tests\WhiteBox\WhiteBox\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\Ilya\Desktop\Labs\Tests\Tests\WhiteBox\WhiteBox\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\Ilya\Desktop\Labs\Tests\Tests\WhiteBox\WhiteBox\bin\Debug\netcoreapp3.1\IIG.PasswordHashingUtils.dll
-C:\Users\Ilya\Desktop\Labs\Tests\Tests\WhiteBox\WhiteBox\obj\Debug\netcoreapp3.1\WhiteBox.csprojAssemblyReference.cache
 C:\Users\Ilya\Desktop\Labs\Tests\Tests\WhiteBox\WhiteBox\obj\Debug\netcoreapp3.1\WhiteBox.AssemblyInfoInputs.cache
 C:\Users\Ilya\Desktop\Labs\Tests\Tests\WhiteBox\WhiteBox\obj\Debug\netcoreapp3.1\WhiteBox.AssemblyInfo.cs
 C:\Users\Ilya\Desktop\Labs\Tests\Tests\WhiteBox\WhiteBox\obj\Debug\netcoreapp3.1\WhiteBox.csproj.CoreCompileInputs.cache
