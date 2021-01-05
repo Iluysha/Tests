@@ -1,6 +1,6 @@
-/BlackBox/bin
-/BlackBox/obj
-/WhiteBox/bin
-/WhiteBox/obj
-/Integration/bin
-/Integration/obj
+/BlackBox/BlackBox/bin
+/BlackBox/BlackBox/obj
+/WhiteBox/WhiteBox/bin
+/WhiteBox/WhiteBox/obj
+/Integration/Integration/bin
+/Integration/Integration/obj
