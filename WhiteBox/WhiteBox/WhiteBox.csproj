@@ -20,9 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="IIG.PasswordHashingUtils">
-      <HintPath>..\..\..\Data\IIG.PasswordHashingUtils.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\IIG.PasswordHashingUtils\IIG.PasswordHashingUtils.csproj" />
   </ItemGroup>
 
 </Project>
