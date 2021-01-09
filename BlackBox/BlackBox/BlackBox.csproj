@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <Reference Include="IIG.BinaryFlag">
-      <HintPath>..\..\..\Data\IIG.BinaryFlag.dll</HintPath>
+      <HintPath>..\IIG.BinaryFlag.dll</HintPath>
     </Reference>
   </ItemGroup>
 
