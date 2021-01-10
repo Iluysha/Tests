@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 using IIG.BinaryFlag;
 
@@ -15,9 +16,26 @@ namespace BlackBox
         }
 
         [Fact]
-        public void length0Test()
+        public void lengthMinTest()
         {
-            ulong length = 0;
+            ulong length = ulong.MinValue;
+            MultipleBinaryFlag flag = new MultipleBinaryFlag(length);
+            Assert.Equal((int)length, flag.ToString().Length);
+        }
+
+        [Fact]
+        public void length1Test()
+        {
+            ulong length = 1;
+            MultipleBinaryFlag flag;
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+                flag = new MultipleBinaryFlag(length));
+        }
+
+        [Fact]
+        public void length2Test()
+        {
+            ulong length = 2;
             MultipleBinaryFlag flag = new MultipleBinaryFlag(length);
             Assert.Equal((int)length, flag.ToString().Length);
         }
@@ -25,7 +43,7 @@ namespace BlackBox
         [Fact]
         public void lengthMaxTest()
         {
-            ulong length = 10000000000000;
+            ulong length = ulong.MaxValue;
             MultipleBinaryFlag flag = new MultipleBinaryFlag(length);
             Assert.Equal(true, flag.GetFlag());
         }
@@ -42,6 +60,15 @@ namespace BlackBox
         public void lengthMaxPossiblePlus1Test()
         {
             ulong length = 17179868705;
+            MultipleBinaryFlag flag;
+            Assert.Throws<ArgumentOutOfRangeException>(() =>
+                flag = new MultipleBinaryFlag(length));
+        }
+
+        [Fact]
+        public void lengthMaxPossibleMinus1Test()
+        {
+            ulong length = 17179868703;
             MultipleBinaryFlag flag = new MultipleBinaryFlag(length);
             Assert.Equal(true, flag.GetFlag());
         }
@@ -93,7 +120,7 @@ namespace BlackBox
         {
             ulong length = 10;
             MultipleBinaryFlag flag = new MultipleBinaryFlag(length, false);
-            flag.SetFlag(100);
+            Assert.Throws<ArgumentOutOfRangeException>(() => flag.SetFlag(100));
         }
 
         [Fact]
@@ -119,7 +146,7 @@ namespace BlackBox
         {
             ulong length = 10;
             MultipleBinaryFlag flag = new MultipleBinaryFlag(length);
-            flag.ResetFlag(100);
+            Assert.Throws<ArgumentOutOfRangeException>(() => flag.ResetFlag(100));
         }
 
         [Fact]
@@ -128,7 +155,7 @@ namespace BlackBox
             ulong length = 100;
             MultipleBinaryFlag flag = new MultipleBinaryFlag(length);
             flag.Dispose();
-            flag.GetFlag();
+            Assert.Throws<ArgumentNullException>(() => flag.GetFlag());
         }
 
         [Fact]
@@ -147,6 +174,7 @@ namespace BlackBox
             MultipleBinaryFlag flag = new MultipleBinaryFlag(length);
             flag.Dispose();
             flag.Dispose();
+            Assert.Throws<ArgumentNullException>(() => flag.GetFlag());
         }
     }
 }

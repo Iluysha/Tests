@@ -64,6 +64,16 @@ namespace Integration
         }
 
         [Fact]
+        public void lengthBigTest()
+        {
+            ulong length = 1000000;
+            MultipleBinaryFlag flag = new MultipleBinaryFlag(length);
+            BaseFileWorker.Write(flag.ToString(), "../../../test4.txt");
+            Assert.Equal(flag.ToString(),
+                BaseFileWorker.ReadAll("../../../test4.txt"));
+        }
+
+        [Fact]
         public void lengthMaxPossibleTest()
         {
             ulong length = 17179868704;
